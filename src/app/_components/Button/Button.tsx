@@ -1,15 +1,16 @@
+import { MouseEventHandler } from 'react';
 import Link from 'next/link';
 import styles from './Button.module.css';
-import { COLORS } from 'src/interfaces/colors';
+import { COLORS } from 'app/_interfaces/colors';
 
 interface Props {
 	buttonColor?: COLORS.default | COLORS.green | COLORS.red | COLORS.gray;
 	buttonSize?: 'narrow' | 'wide';
-	buttonLabel: String;
+	buttonLabel: string;
 	noMargin?: boolean;
 	linkTo?: string;
 	isActive?: boolean;
-	handleClick?: any;
+	handleClick?: MouseEventHandler<HTMLAnchorElement> | undefined;
 	type?: string;
 }
 

@@ -20,7 +20,8 @@
     ],
     "paths": {
       // "@/*": ["./src/*"],
-      "@/components/*": ["components/*"],
+      "@/components/*": ["_components/*"],
+      "@/interfaces/*": ["_interfaces/*"],
     },
     "baseUrl": "src/", 
   },
