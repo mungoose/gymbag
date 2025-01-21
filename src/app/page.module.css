@@ -1,14 +1,4 @@
-.container {
-	min-height: 100vh;
-	padding: 0 0.5rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
 .main {
-	max-width: 1170px;
 	width: 100%;
 	padding: 5rem 0;
 	flex: 1;
@@ -16,6 +6,9 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	max-height: 2532px;
+	max-width: 1170px;
+	border: 1px solid green;
 }
 
 .wrapper {

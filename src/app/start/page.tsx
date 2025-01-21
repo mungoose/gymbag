@@ -7,16 +7,16 @@ import styles from './styles.module.css';
 const Start = () => {
 	return (
 		<div className={styles.container}>
-			<Link href='/'>
+			<Link href="/">
 				<div className={styles.label}>
-					<Image src='/images/logo.png' alt='Trainingbag logo' width={150} height={150} />
+					<Image src="/images/logo.png" alt="Trainingbag logo" width={150} height={150} />
 					<p>PUT YOUR CREDENTIALS IN HERE</p>
 				</div>
 			</Link>
 			<div className={styles.form}>
-				<Input inputPlaceholder='Your username here..' />
-				<Input inputPlaceholder='Your password here..' inputType='password' />
-				<Button buttonLabel='SIGN IN' buttonSize='wide' linkTo='/takeoff' />
+				<Input inputPlaceholder="Your username here.." />
+				<Input inputPlaceholder="Your password here.." inputType="password" />
+				<Button buttonLabel="SIGN IN" buttonSize="wide" linkTo="/takeoff" />
 			</div>
 		</div>
 	);
