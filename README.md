@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org) project
-
 # Gymbag
 
 A simple app with two things: a checklist of things you need to bring with you to the gym and a list of exercises you want to do
@@ -31,3 +29,5 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+This is a [Next.js](https://nextjs.org) project

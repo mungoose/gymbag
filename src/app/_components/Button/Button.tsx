@@ -40,7 +40,7 @@ const Button = ({
 									width: buttonWidth,
 									maxWidth: buttonMaxWidth,
 									marginTop: '50px',
-							  }
+								}
 					}
 				>
 					<div className={styles.buttonLabel}>{buttonLabel}</div>
