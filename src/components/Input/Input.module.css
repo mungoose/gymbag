@@ -1,0 +1,44 @@
+.containerSmall {
+	width: 40vw;
+	max-width: 1005px;
+	height: 15vw;
+	max-height: 150px;
+	border-radius: 20px;
+	display: flex;
+	padding: 30px;
+	font-family: 'Fredoka One';
+	font-size: 6vw;
+	text-align: center;
+	border: 1px solid #878787;
+	box-shadow: inset 15px 15px 30px #3d3d3d;
+}
+
+.containerLong {
+	width: 80vw;
+	max-width: 1005px;
+	height: 10vw;
+	max-height: 150px;
+	border-radius: 20px;
+	display: flex;
+	padding: 30px;
+	font-family: 'Fredoka One';
+	font-size: 6vw;
+	text-align: center;
+	border: 1px solid #878787;
+	box-shadow: inset 15px 15px 30px #3d3d3d;
+}
+
+.containerTextarea {
+	width: 100vw;
+	max-width: 1005px;
+	height: 650px;
+	max-height: 650px;
+	border-radius: 20px;
+	display: flex;
+	padding: 30px;
+	font-family: 'Fredoka One';
+	font-size: 4vw;
+	text-align: left;
+	border: 1px solid #878787;
+	box-shadow: inset 15px 15px 30px #3d3d3d;
+}
