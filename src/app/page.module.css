@@ -6,9 +6,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	max-height: 2532px;
-	max-width: 1170px;
-	border: 1px solid green;
+	opacity: 50%;
 }
 
 .wrapper {
