@@ -7,9 +7,9 @@ export default function Home() {
 		<main className={styles.main}>
 			<Link href="./start">
 				<div className={styles.wrapper}>
-					<Image src="/images/logo.png" alt="Trainingbag logo" width={150} height={150} />
+					<Image src="/images/logo.png" alt="Trainingbag logo" width={150} height={150} priority={true} />
 					<p>ENTER YOUR</p>
-					<p>TRAININGBAG</p>
+					<p>GYMBAG</p>
 					<p>HERE</p>
 				</div>
 			</Link>

@@ -6,7 +6,6 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	opacity: 50%;
 }
 
 .wrapper {
@@ -16,8 +15,8 @@
 	align-items: center;
 	color: white;
 	padding: 3rem;
-	border-radius: 25px;
+	border-radius: var(--default-radius);
 	border: 5px solid white;
-	box-shadow: rgb(0 0 0) 10px 10px 35px;
-	background-color: rgba(0, 0, 0, 0.3);
+	box-shadow: rgb(0 0 0) 1px 1px 10px;
+	background-color: var(--colour-contrast-dark);
 }

@@ -24,27 +24,28 @@ const Button = ({
 	handleClick,
 	type,
 }: Props) => {
-	const buttonWidth = buttonSize === 'narrow' ? '30vw' : '80vw';
+	const buttonWidth = buttonSize === 'narrow' ? '30vw' : '100%';
 	const buttonMaxWidth = buttonSize === 'narrow' ? '350px' : '1005px';
 
 	return (
-		<Link href={linkTo} type={type} onClick={handleClick}>
+		<Link
+			href={linkTo}
+			type={type}
+			onClick={handleClick}
+			className={styles.container}
+			style={
+				noMargin
+					? { backgroundColor: buttonColor, width: buttonWidth, maxWidth: buttonMaxWidth }
+					: {
+							backgroundColor: buttonColor,
+							width: buttonWidth,
+							maxWidth: buttonMaxWidth,
+							marginTop: '20px',
+						}
+			}
+		>
 			<div style={isActive ? {} : { opacity: '50%' }}>
-				<div
-					className={styles.container}
-					style={
-						noMargin
-							? { backgroundColor: buttonColor, width: buttonWidth, maxWidth: buttonMaxWidth }
-							: {
-									backgroundColor: buttonColor,
-									width: buttonWidth,
-									maxWidth: buttonMaxWidth,
-									marginTop: '50px',
-								}
-					}
-				>
-					<div className={styles.buttonLabel}>{buttonLabel}</div>
-				</div>
+				<div className={styles.buttonLabel}>{buttonLabel}</div>
 			</div>
 		</Link>
 	);
