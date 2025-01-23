@@ -1,44 +1,29 @@
-.containerSmall {
-	width: 40vw;
-	max-width: 1005px;
-	height: 15vw;
-	max-height: 150px;
-	border-radius: 20px;
+.containerLong {
 	display: flex;
-	padding: 30px;
-	font-family: 'Fredoka One';
-	font-size: 6vw;
+	min-height: var(--default-height);
+	font-size: 4vw;
 	text-align: center;
-	border: 1px solid #878787;
-	box-shadow: inset 15px 15px 30px #3d3d3d;
+	border: var(--default-border);
+	border-radius: var(--default-radius);
+	box-shadow: inset 1px 1px 3px #3d3d3d;
 }
 
-.containerLong {
-	width: 80vw;
-	max-width: 1005px;
-	height: 10vw;
-	max-height: 150px;
+.containerSmall {
 	border-radius: 20px;
 	display: flex;
-	padding: 30px;
-	font-family: 'Fredoka One';
+	min-height: var(--default-height);
 	font-size: 6vw;
 	text-align: center;
-	border: 1px solid #878787;
-	box-shadow: inset 15px 15px 30px #3d3d3d;
+	border: var(--default-border);
+	border-radius: var(--default-radius);
+	box-shadow: inset 1px 1px 5px #3d3d3d;
 }
 
 .containerTextarea {
-	width: 100vw;
-	max-width: 1005px;
-	height: 650px;
-	max-height: 650px;
-	border-radius: 20px;
+	border-radius: var(--default-radius);
 	display: flex;
-	padding: 30px;
-	font-family: 'Fredoka One';
 	font-size: 4vw;
 	text-align: left;
-	border: 1px solid #878787;
-	box-shadow: inset 15px 15px 30px #3d3d3d;
+	border: var(--default-border);
+	box-shadow: inset 1px 1px 5px #3d3d3d;
 }

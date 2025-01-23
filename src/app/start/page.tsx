@@ -14,8 +14,8 @@ const Start = () => {
 				</div>
 			</Link>
 			<div className={styles.form}>
-				<Input inputPlaceholder="Your username here.." />
-				<Input inputPlaceholder="Your password here.." inputType="password" />
+				<Input inputPlaceholder="USERNAME IN HERE.." />
+				<Input inputPlaceholder="PASSWORD HERE.." inputType="password" />
 				<Button buttonLabel="SIGN IN" buttonSize="wide" linkTo="/takeoff" />
 			</div>
 		</div>

@@ -16,8 +16,8 @@ const Input = ({ inputPlaceholder, value, inputType = 'text', size = 'long', nam
 			{!isTextarea ? (
 				<input
 					className={cn({
-						[styles.containerSmall]: size === 'small',
 						[styles.containerLong]: size === 'long',
+						[styles.containerSmall]: size === 'small',
 					})}
 					placeholder={inputPlaceholder}
 					value={value}

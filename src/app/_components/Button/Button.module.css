@@ -1,11 +1,11 @@
 .container {
-	height: 10vw;
-	border-radius: 20px;
-	border: solid 3px #7d7d7d;
+	border-radius: var(--default-radius);
+	min-height: var(--default-height);
+	border: var(--default-border);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	box-shadow: rgb(0 0 0) 10px 10px 35px;
+	box-shadow: rgb(0 0 0) 1px 1px 5px;
 }
 
 .buttonLabel {
