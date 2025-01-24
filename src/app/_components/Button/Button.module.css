@@ -9,7 +9,7 @@
 }
 
 .buttonLabel {
-	font-size: 4vw;
+	font-size: var(--default-font-size);
 	letter-spacing: 0.1em;
 	background-color: #676767;
 	color: transparent;
