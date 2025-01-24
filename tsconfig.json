@@ -19,9 +19,10 @@
       }
     ],
     "paths": {
-      // "@/*": ["./src/*"],
-      "@/components/*": ["_components/*"],
-      "@/interfaces/*": ["_interfaces/*"],
+      "@/*": ["./src/*"],
+      "@/components/*": ["app/_components/*"],
+      "@/interfaces/*": ["app/_interfaces/*"],
+      "@/utils/*": ["app/_utils/*"],
     },
     "baseUrl": "src/", 
   },
