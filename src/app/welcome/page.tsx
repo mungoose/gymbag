@@ -13,7 +13,7 @@ const Welcome = () => {
 
 	useEffect(() => {
 		const fetchSession = async () => {
-			const res = await fetch('http://localhost:3000/api/auth/session');
+			const res = await fetch('/api/auth/session');
 			const sessionData = await res.json();
 
 			setSession(sessionData);
