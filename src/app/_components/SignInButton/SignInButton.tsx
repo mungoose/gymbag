@@ -1,24 +1,27 @@
+'use client';
+
 import styles from './SignInButton.module.css';
 import { COLORS } from 'app/_interfaces/colors';
-import { signIn } from '@/utils/auth';
+import { signIn } from 'next-auth/react';
 
 interface Props {
+	buttonLabel: string;
 	buttonColor?: COLORS.default | COLORS.green | COLORS.red | COLORS.gray;
 	buttonSize?: 'narrow' | 'wide';
-	buttonLabel: string;
 	noMargin?: boolean;
 }
 
-const Button = ({ buttonColor = COLORS.default, buttonSize = 'narrow', buttonLabel = 'DEFAULT', noMargin }: Props) => {
+const handleSignin = async () => {
+	await signIn('google', { callbackUrl: '/welcome' });
+};
+
+const Button = ({ buttonLabel = 'DEFAULT', buttonColor = COLORS.default, buttonSize = 'narrow', noMargin }: Props) => {
 	const buttonWidth = buttonSize === 'narrow' ? '30vw' : '100%';
 	const buttonMaxWidth = buttonSize === 'narrow' ? '350px' : '1005px';
 
 	return (
-		<form
-			action={async () => {
-				'use server';
-				await signIn('google');
-			}}
+		<button
+			onClick={handleSignin}
 			className={styles.container}
 			style={
 				noMargin
@@ -31,10 +34,8 @@ const Button = ({ buttonColor = COLORS.default, buttonSize = 'narrow', buttonLab
 						}
 			}
 		>
-			<button type="submit" className={styles.buttonLabel}>
-				{buttonLabel}
-			</button>
-		</form>
+			{buttonLabel}
+		</button>
 	);
 };
 
