@@ -12,7 +12,7 @@ interface Props {
 }
 
 const handleSignin = async () => {
-	await signIn('google', { callbackUrl: '/welcome' });
+	await signIn('google', { callbackUrl: '/bag' });
 };
 
 const Button = ({ buttonLabel = 'DEFAULT', buttonColor = COLORS.default, buttonSize = 'narrow', noMargin }: Props) => {

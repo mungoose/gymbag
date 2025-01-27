@@ -1,0 +1,14 @@
+.container {
+	display: grid;
+	align-items: center;
+	width: 100%;
+	min-height: 175px;
+	bottom: 0px;
+	background: #092022;
+	box-shadow: 0 -10px 35px #000000;
+}
+
+.navigatorButtons {
+	display: flex;
+	justify-content: space-evenly;
+}

@@ -22,6 +22,7 @@
       "@/*": ["./src/*"],
       "@/components/*": ["app/_components/*"],
       "@/interfaces/*": ["app/_interfaces/*"],
+      "@/types/*": ["app/_types/*"],
       "@/utils/*": ["app/_utils/*"],
     },
     "baseUrl": "src/", 

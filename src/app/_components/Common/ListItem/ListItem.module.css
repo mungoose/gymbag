@@ -1,0 +1,75 @@
+.container {
+	display: inline-flex;
+	align-items: center;
+	width: 100%;
+	height: 175px;
+	margin-top: 0.7vh;
+}
+
+.listItemNormal {
+	display: inline-flex;
+	align-items: center;
+	width: 100%;
+	height: 150px;
+	padding: 0 30px;
+}
+
+.listItemSelected {
+	display: inline-flex;
+	align-items: center;
+	width: 100%;
+	height: 150px;
+	padding: 0 30px;
+	background-color: rgba(255, 255, 255, 0.2);
+	box-shadow: inset 15px 15px 30px #3d3d3d;
+}
+
+.checkBox {
+	height: 6rem;
+	min-width: 6rem;
+	border: 1px solid #7d7d7d;
+	border-radius: 25px;
+	box-shadow: inset 15px 15px 30px #3d3d3d;
+}
+
+.listItemLabel {
+	font-family: 'Fredoka One';
+	color: white;
+	font-size: 3rem;
+	letter-spacing: 0.1em;
+	text-align: left;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	overflow: hidden;
+	max-height: 3.5em;
+	line-height: 1.2em;
+	padding: 20px;
+}
+
+.listItemLabel:link {
+	text-decoration: none;
+}
+
+.listItemLabel:visited {
+	text-decoration: none;
+}
+
+.listItemLabel:hover {
+	text-decoration: none;
+}
+
+.listItemLabel:active {
+	text-decoration: none;
+}
+
+.delete {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	height: 150px;
+	min-width: 150px;
+	border-radius: 0 15px 15px 0;
+	background-color: #e05436;
+}
