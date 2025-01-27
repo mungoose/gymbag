@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import SignInButton from '@/components/SignInButton/SignInButton';
-import Input from 'app/_components/Input/Input';
 import styles from './styles.module.css';
 
 const Start = () => {
@@ -15,8 +14,6 @@ const Start = () => {
 				</div>
 			</Link>
 			<div className={styles.form}>
-				<Input inputPlaceholder="USERNAME IN HERE.." />
-				<Input inputPlaceholder="PASSWORD HERE.." inputType="password" />
 				<SignInButton buttonLabel="SIGN IN" buttonSize="wide" />
 			</div>
 		</div>
