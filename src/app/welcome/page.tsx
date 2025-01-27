@@ -1,14 +1,9 @@
 'use client';
 import { useEffect, useState } from 'react';
 import styles from './styles.module.css';
+import { Session } from 'next-auth';
 
 const Welcome = () => {
-	interface Session {
-		user: {
-			name: string;
-		};
-	}
-
 	const [session, setSession] = useState<Session | null>(null);
 
 	useEffect(() => {
@@ -21,8 +16,6 @@ const Welcome = () => {
 
 		fetchSession();
 	}, []);
-
-	console.log('.... session: ', session);
 
 	if (!session) {
 		return <div>Loading...</div>;
