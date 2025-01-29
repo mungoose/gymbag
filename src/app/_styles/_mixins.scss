@@ -1,0 +1,22 @@
+// Use with: @include ${mixinName} { ... }
+
+@mixin tablet {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet-and-mobile {
+  @include tablet {
+    @content;
+  }
+  @include mobile {
+    @content;
+  }
+}

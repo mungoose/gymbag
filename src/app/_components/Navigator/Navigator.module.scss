@@ -1,0 +1,23 @@
+@import '@/variables';
+@import '@/mixins';
+
+.container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	min-height:  $default-height;
+	background:   $colour-primary-dark;
+	box-shadow: 0 -10px 35px #000000;
+	border-radius:   $default-radius   $default-radius 0 0 ;
+
+	@include mobile {
+		min-height: $default-mobile-height;
+	}
+}
+
+.navigatorButtons {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	margin:   $default-margin;
+}

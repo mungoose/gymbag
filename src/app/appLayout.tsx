@@ -4,7 +4,7 @@ import Header from '@/components/Header/Header';
 import Navigator from '@/components/Navigator/Navigator';
 import type { LogoLabel } from '@/types/labels';
 import { COLORS } from '@/interfaces/colors';
-import styles from './appLayout.module.css';
+import styles from '@/styles/appLayout.module.scss';
 
 type Props = {
 	children: ReactNode;

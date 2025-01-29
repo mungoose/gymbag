@@ -1,4 +1,4 @@
-import styles from './Header.module.css';
+import styles from './Header.module.scss';
 import { COLORS } from '@/interfaces/colors';
 import type { LogoLabel } from '@/types/labels';
 import Logo from '@/components/Header/Logo/Logo';

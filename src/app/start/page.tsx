@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import SignInButton from '@/components/SignInButton/SignInButton';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 const Start = () => {
 	return (

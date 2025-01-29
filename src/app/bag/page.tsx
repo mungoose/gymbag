@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { Session } from 'next-auth';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 import AppLayout from 'app/appLayout';
 import ListItem from '@/components/Common/ListItem/ListItem';
 import { sampleTakeoffList } from 'app/_lib/checklist-data';

@@ -1,6 +1,6 @@
 import { MouseEventHandler } from 'react';
 import Link from 'next/link';
-import styles from './Button.module.css';
+import styles from './Button.module.scss';
 import { COLORS } from 'app/_interfaces/colors';
 
 interface Props {
@@ -24,7 +24,7 @@ const Button = ({
 	handleClick,
 	type,
 }: Props) => {
-	const buttonWidth = buttonSize === 'narrow' ? '30vw' : '100%';
+	const buttonWidth = buttonSize === 'narrow' ? '30%' : '100%';
 	const buttonMaxWidth = buttonSize === 'narrow' ? '350px' : '1005px';
 
 	return (
@@ -44,7 +44,7 @@ const Button = ({
 						}
 			}
 		>
-			<div style={isActive ? {} : { opacity: '50%' }}>
+			<div style={isActive ? {} : { opacity: '25%' }} className={styles.labelWrapper}>
 				<div className={styles.buttonLabel}>{buttonLabel}</div>
 			</div>
 		</Link>

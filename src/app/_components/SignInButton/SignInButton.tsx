@@ -1,6 +1,6 @@
 'use client';
 
-import styles from './SignInButton.module.css';
+import styles from './SignInButton.module.scss';
 import { COLORS } from 'app/_interfaces/colors';
 import { signIn } from 'next-auth/react';
 

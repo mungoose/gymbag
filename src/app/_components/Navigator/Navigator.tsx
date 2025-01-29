@@ -1,4 +1,4 @@
-import styles from './Navigator.module.css';
+import styles from './Navigator.module.scss';
 import Button from '@/components/Common/Button/Button';
 import { COLORS } from '@/interfaces/colors';
 

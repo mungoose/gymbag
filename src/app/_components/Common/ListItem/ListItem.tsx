@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { MouseEventHandler } from 'react';
-import styles from './ListItem.module.css';
+import styles from './ListItem.module.scss';
 import { COLORS } from '@/interfaces/colors';
 
 interface Props {
