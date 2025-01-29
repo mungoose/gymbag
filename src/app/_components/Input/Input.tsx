@@ -1,4 +1,4 @@
-import styles from './Input.module.css';
+import styles from './Input.module.scss';
 import cn from 'classnames';
 
 interface Props {

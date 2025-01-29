@@ -1,6 +1,6 @@
 'use client';
 
-import styles from './SignInButton.module.css';
+import styles from './SignInButton.module.scss';
 import { COLORS } from 'app/_interfaces/colors';
 import { signIn } from 'next-auth/react';
 
@@ -12,7 +12,7 @@ interface Props {
 }
 
 const handleSignin = async () => {
-	await signIn('google', { callbackUrl: '/welcome' });
+	await signIn('google', { callbackUrl: '/bag' });
 };
 
 const Button = ({ buttonLabel = 'DEFAULT', buttonColor = COLORS.default, buttonSize = 'narrow', noMargin }: Props) => {

@@ -1,7 +1,9 @@
+@import '@/variables';
+
 .container {
-	border-radius: var(--default-radius);
-	min-height: var(--default-height);
-	border: var(--default-border);
+	border-radius:   $default-radius;
+	min-height:   $default-height;
+	border:   $default-border;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -9,10 +11,11 @@
 }
 
 .buttonLabel {
-	font-size: var(--default-font-size);
+	font-size:   $default-font-size;
 	letter-spacing: 0.1em;
 	background-color: #676767;
 	color: transparent;
 	text-shadow: 2px 2px 1px #ffffff;
 	background-clip: text;
+	border: none;
 }

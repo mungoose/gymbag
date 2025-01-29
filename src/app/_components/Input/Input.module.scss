@@ -1,0 +1,31 @@
+@import '@/variables';
+
+.containerLong {
+	display: flex;
+	min-height:   $default-height;
+	font-size:   $default-font-size;
+	text-align: center;
+	border:   $default-border;
+	border-radius:   $default-radius;
+	box-shadow: inset 1px 1px 3px #3d3d3d;
+}
+
+.containerSmall {
+	border-radius: 20px;
+	display: flex;
+	min-height:   $default-height;
+	font-size:   $default-font-size;
+	text-align: center;
+	border:   $default-border;
+	border-radius:   $default-radius;
+	box-shadow: inset 1px 1px 5px #3d3d3d;
+}
+
+.containerTextarea {
+	border-radius:   $default-radius;
+	display: flex;
+	font-size:   $default-font-size;
+	text-align: left;
+	border:   $default-border;
+	box-shadow: inset 1px 1px 5px #3d3d3d;
+}

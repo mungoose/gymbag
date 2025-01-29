@@ -1,3 +1,5 @@
+@import '@/variables';
+
 .main {
 	width: 100%;
 	padding: 5rem 0;
@@ -15,8 +17,8 @@
 	align-items: center;
 	color: white;
 	padding: 3rem;
-	border-radius: var(--default-radius);
+	border-radius:   $default-radius;
 	border: 5px solid white;
 	box-shadow: rgb(0 0 0) 1px 1px 10px;
-	background-color: var(--colour-contrast-dark);
+	background-color:   $colour-contrast-dark;
 }
