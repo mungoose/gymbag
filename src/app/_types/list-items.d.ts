@@ -1,5 +1,5 @@
-export interface ListItem {
-	id: string;
+export interface ListItemType {
+	itemId: string;
 	userId: string;
 	isDone: boolean;
 	listItemLabel: string;
