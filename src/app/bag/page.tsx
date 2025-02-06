@@ -1,28 +1,18 @@
 'use client';
-import { useEffect, useState } from 'react';
-import { Session } from 'next-auth';
 import styles from './styles.module.scss';
 import AppLayout from 'app/appLayout';
 import ListItem from '@/components/Common/ListItem/ListItem';
-import { sampleTakeoffList } from 'app/_lib/checklist-data';
+import { sampleTakeoffList, ListItemType } from 'app/_lib/checklist-data';
 
 const Bag = () => {
-	const [session, setSession] = useState<Session | null>(null);
+	const handleCheckboxClick = (item: ListItemType) => {
+		console.log('.... clicked on: ', item);
+		const itemIndex = sampleTakeoffList.findIndex((listItem) => listItem.listItemLabel === item.listItemLabel);
 
-	useEffect(() => {
-		const fetchSession = async () => {
-			const res = await fetch('/api/auth/session');
-			const sessionData = await res.json();
+		console.log('.... item index: ', itemIndex);
 
-			setSession(sessionData);
-		};
-
-		fetchSession();
-	}, []);
-
-	if (!session) {
-		return <div>Loading...</div>;
-	}
+		sampleTakeoffList[itemIndex].isDone = !sampleTakeoffList[itemIndex].isDone;
+	};
 
 	return (
 		<AppLayout
@@ -39,7 +29,7 @@ const Bag = () => {
 						isDone={item.isDone}
 						listItemLabel={item.listItemLabel}
 						listItemDelete={item.listItemDelete}
-						handleCheckboxClick={() => {}}
+						handleCheckboxClick={() => handleCheckboxClick(item)}
 					/>
 				))}
 			</div>

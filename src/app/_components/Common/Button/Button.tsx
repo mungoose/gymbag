@@ -4,9 +4,9 @@ import styles from './Button.module.scss';
 import { COLORS } from 'app/_interfaces/colors';
 
 interface Props {
+	buttonLabel: string;
 	buttonColor?: COLORS.default | COLORS.green | COLORS.red | COLORS.gray;
 	buttonSize?: 'narrow' | 'wide';
-	buttonLabel: string;
 	noMargin?: boolean;
 	linkTo?: string;
 	isActive?: boolean;
@@ -15,9 +15,9 @@ interface Props {
 }
 
 const Button = ({
+	buttonLabel = 'DEFAULT',
 	buttonColor = COLORS.default,
 	buttonSize = 'narrow',
-	buttonLabel = 'DEFAULT',
 	noMargin,
 	linkTo = '',
 	isActive = true,

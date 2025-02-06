@@ -12,9 +12,7 @@ const Start = () => {
 					<Image src="/images/logo.png" alt="Trainingbag logo" width={150} height={150} />
 				</div>
 			</Link>
-			<div className={styles.form}>
-				<SignInButton buttonLabel="SIGN IN" buttonSize="wide" />
-			</div>
+			<SignInButton />
 		</div>
 	);
 };
