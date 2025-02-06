@@ -1,10 +1,4 @@
-export interface ListItemType {
-	isDone: boolean;
-	listItemLabel: string;
-	listItemDelete: boolean;
-}
-
-export const sampleTakeoffList: ListItemType[] = [
+export const sampleTakeoffList = [
 	{ listItemLabel: 'Shoes', isDone: false, listItemDelete: false },
 	{ isDone: false, listItemLabel: 'Socks', listItemDelete: true },
 	{ isDone: false, listItemLabel: 'Underpants', listItemDelete: false },

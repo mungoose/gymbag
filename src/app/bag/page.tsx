@@ -1,18 +1,10 @@
-'use client';
 import styles from './styles.module.scss';
 import AppLayout from 'app/appLayout';
 import ListItem from '@/components/Common/ListItem/ListItem';
-import { sampleTakeoffList, ListItemType } from 'app/_lib/checklist-data';
+import { fetchBagItems } from '@/supabase/supabase.api';
 
-const Bag = () => {
-	const handleCheckboxClick = (item: ListItemType) => {
-		console.log('.... clicked on: ', item);
-		const itemIndex = sampleTakeoffList.findIndex((listItem) => listItem.listItemLabel === item.listItemLabel);
-
-		console.log('.... item index: ', itemIndex);
-
-		sampleTakeoffList[itemIndex].isDone = !sampleTakeoffList[itemIndex].isDone;
-	};
+const Bag = async () => {
+	const fetchedItems = await fetchBagItems('17805293-1193-4548-b101-ddadee114600');
 
 	return (
 		<AppLayout
@@ -23,13 +15,13 @@ const Bag = () => {
 			logoLink=""
 		>
 			<div className={styles.container}>
-				{sampleTakeoffList.map((item, index) => (
+				{fetchedItems.map((item) => (
 					<ListItem
-						key={index}
+						key={item.id}
 						isDone={item.isDone}
 						listItemLabel={item.listItemLabel}
-						listItemDelete={item.listItemDelete}
-						handleCheckboxClick={() => handleCheckboxClick(item)}
+						listItemDelete={false}
+						// handleCheckboxClick={() => handleCheckboxClick(item)}
 					/>
 				))}
 			</div>
