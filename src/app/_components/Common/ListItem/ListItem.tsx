@@ -1,39 +1,31 @@
+'use client';
 import Link from 'next/link';
-import { MouseEventHandler } from 'react';
+import type { ListItemType } from '@/types/list-items';
 import styles from './ListItem.module.scss';
 import { COLORS } from '@/interfaces/colors';
 
 interface Props {
-	isDone: boolean;
-	listItemLabel: string;
-	listItemDelete: boolean;
-	handleCheckboxClick: MouseEventHandler<HTMLDivElement> | undefined;
-	listItemLink?: string;
-	listItemColor?: COLORS.white | COLORS.green;
+	item: Partial<ListItemType>;
+	onClick: () => void;
+	itemLink?: string;
 }
 
-const ListItem = ({
-	isDone = false,
-	listItemLabel = 'default',
-	listItemDelete = true,
-	handleCheckboxClick,
-	listItemLink = '',
-	listItemColor = COLORS.white,
-}: Props) => {
-	if (isDone) {
+const ListItem = ({ item, onClick, itemLink }: Props) => {
+	let listItemColor = COLORS.white;
+
+	if (item.isDone) {
 		listItemColor = COLORS.green;
 	}
+
+	// temp hack until I implement it correclty
+	const listItemDelete = false;
 
 	return (
 		<div className={styles.container}>
 			<div className={!listItemDelete ? styles.listItemNormal : styles.listItemSelected}>
-				<div
-					className={styles.checkBox}
-					style={{ backgroundColor: listItemColor }}
-					onClick={handleCheckboxClick}
-				></div>
-				<Link className={styles.listItemLabel} style={{ color: listItemColor }} href={listItemLink}>
-					{listItemLabel}
+				<div className={styles.checkBox} style={{ backgroundColor: listItemColor }} onClick={onClick}></div>
+				<Link className={styles.listItemLabel} style={{ color: listItemColor }} href={itemLink || ''}>
+					{item.listItemLabel}
 				</Link>
 			</div>
 			{listItemDelete && <div className={styles.delete}>DELETE</div>}

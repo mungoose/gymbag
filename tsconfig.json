@@ -27,6 +27,7 @@
       "@/variables": ["app/_styles/_variables.scss"],
       "@/types/*": ["app/_types/*"],
       "@/utils/*": ["app/_utils/*"],
+      "@/supabase/*": ["app/_utils/supabase/*"],
     },
     "baseUrl": "src/", 
   },

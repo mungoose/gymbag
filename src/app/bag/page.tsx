@@ -1,28 +1,10 @@
-'use client';
-import { useEffect, useState } from 'react';
-import { Session } from 'next-auth';
 import styles from './styles.module.scss';
 import AppLayout from 'app/appLayout';
-import ListItem from '@/components/Common/ListItem/ListItem';
-import { sampleTakeoffList } from 'app/_lib/checklist-data';
+import { fetchBagItems } from '@/supabase/supabase.api';
+import List from '@/components/List/List';
 
-const Bag = () => {
-	const [session, setSession] = useState<Session | null>(null);
-
-	useEffect(() => {
-		const fetchSession = async () => {
-			const res = await fetch('/api/auth/session');
-			const sessionData = await res.json();
-
-			setSession(sessionData);
-		};
-
-		fetchSession();
-	}, []);
-
-	if (!session) {
-		return <div>Loading...</div>;
-	}
+const Bag = async () => {
+	const fetchedItems = await fetchBagItems('17805293-1193-4548-b101-ddadee114600');
 
 	return (
 		<AppLayout
@@ -33,15 +15,7 @@ const Bag = () => {
 			logoLink=""
 		>
 			<div className={styles.container}>
-				{sampleTakeoffList.map((item, index) => (
-					<ListItem
-						key={index}
-						isDone={item.isDone}
-						listItemLabel={item.listItemLabel}
-						listItemDelete={item.listItemDelete}
-						handleCheckboxClick={() => {}}
-					/>
-				))}
+				<List items={fetchedItems} />
 			</div>
 		</AppLayout>
 	);
